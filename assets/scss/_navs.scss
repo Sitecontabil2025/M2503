@@ -1,0 +1,29 @@
+.nav{
+    &-item{
+        padding: 0 10px
+    }
+    &-link{
+        @include rfs(14px);
+        font-weight: 600;
+        color: var(--bs-body-color);
+        text-transform: uppercase;
+        padding: 0;
+    }
+
+    &-footer {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        li {
+            margin-bottom: 10px;
+            a{
+                @include rfs(14px);
+            }
+        }
+
+        @media (min-width: map-get($grid-breakpoints, lg)) {
+            column-count: 4;
+        }
+    }
+}

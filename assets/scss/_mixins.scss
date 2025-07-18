@@ -1,0 +1,72 @@
+// PSEUDO ELEMENT --------------------
+// Define um mixin para configurar estilos de pseudo-elementos
+@mixin pseudoElement($content, $pos){
+    content: $content;
+    position: $pos;
+}
+
+// FLEX CENTER --------------------
+// Define um mixin para centralizar elementos flexíveis
+@mixin flexCenter($display: inline-flex, $position: center){
+    display: $display !important; // Define o tipo de display do elemento flexível
+    justify-content: $position; // Define o alinhamento horizontal do conteúdo
+    align-items: $position; // Define o alinhamento vertical do conteúdo
+}
+
+// RESET LIST --------------------
+// Define um mixin para resetar estilos de listas
+@mixin listReset($style: none, $spacing: 0){
+    list-style: $style; // Define o estilo da lista
+    margin: $spacing; // Define a margem da lista
+    padding: $spacing; // Define o preenchimento da lista
+}
+
+// SQUARE --------------------
+// Define um mixin para criar elementos quadrados
+@mixin square($value){
+    width: $value; // Define a largura do elemento
+    height: $value; // Define a altura do elemento
+}
+
+// FONT STYLE --------------------
+// Aplica estilos a classes de acordo com valores em $styles
+@each $style in $styles{
+    .font-#{$style}{
+        font-style: $style; // Aplica o estilo da fonte às classes
+    }
+}
+
+@function set-color($color){
+    @if (lightness($color) > 40%){
+        @return $black;
+    }
+    @else{
+        @return $white;
+    }
+}
+
+@mixin dynamic-color($color){
+    background-color: $color;
+    color: set-color($color);
+}
+
+@mixin details($size, $background, $top-offset: null, $left-offset: null, $right-offset: null, $bottom-offset: null){
+    @include square($size);
+    @include pseudoElement('', absolute);
+    border-radius: 50%;
+    background-color: $background;
+    top: if($top-offset != null, $top-offset, auto);
+    left: if($left-offset != null, $left-offset, auto);
+    right: if($right-offset != null, $right-offset, auto);
+    bottom: if($bottom-offset != null, $bottom-offset, auto);
+
+
+}
+
+// COLORS --------------------
+// Aplica estilos de cor a classes de acordo com valores em $colors-array
+@each $color-name, $color-value in $colors{
+    .bg-#{$color-name}{
+        @include dynamic-color($color-value);
+    }
+}

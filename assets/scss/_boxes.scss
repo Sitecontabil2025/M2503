@@ -1,0 +1,69 @@
+.box {
+    background-color: rgba(var(--bs-body-color-rgb), .03);
+    border: 2px solid var(--bs-body-bg);
+    border-radius: 10px;
+
+    &-picture {
+        width: 100%;
+        height: 600px;
+        border-radius: 200px;
+        border: 1px solid var(--bs-body-color);
+        position: relative;
+        padding: 20px;
+
+        &-image {
+            @include square(100%);
+            border-radius: 180px;
+            border: 2px solid var(--bs-white);
+            box-shadow: 50px 50px 50px rgba($dark, .2);
+
+            background: {
+                image: var(--bs-background);
+                position: center;
+                size: cover;
+            }
+
+            ;
+        }
+
+        &:before {
+            @include details(50px, var(--bs-color), 20px, 30px);
+        }
+
+        &:after {
+            @include details(30px, var(--bs-body-color), null, null, 50px, 30px);
+        }
+    }
+
+    &-solutions {
+        @extend .box;
+        padding: 20px;
+        &:hover{
+            color: var(--bs-body-color);
+        }
+
+        &_transparent {
+            @extend .box;
+            padding: 16px;
+        }
+    }
+
+    &-news {
+        @extend .box;
+        display: block;
+        padding: 15px;
+        transition: all ease .7s;
+        transition: all ease .7s;
+
+        &:hover {
+            transform: scale(1.01, 1.01);
+            color: var(--bs-body-color);
+        }
+
+        &-container {
+            &:hover>.box-news:not(:hover) {
+                filter: blur(1.5px);
+            }
+        }
+    }
+}

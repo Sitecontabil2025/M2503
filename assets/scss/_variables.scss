@@ -1,0 +1,42 @@
+// URLs --------------------
+$urlFont: '../fonts/';
+$urlImg: '../images/';
+
+// FONT-FAMILY --------------------
+$fontFamily: "Montserrat", sans-serif;
+
+// COLORS -------------------- CASO O CLIENTE TENHA APENAS UMA COR, NAS DEMAIS CORES COLOCAR UMA VARIAÇÃO DA COR PRINCIPAL
+$primary:   #88d4bc;
+$secondary: #e98e9f;
+$tertiary:  #ec997b;
+$gray-300:  #f3f3f3;
+$white:     #FFFFFF;
+$black:     #000000;
+
+// SPACERS ARRAY --------------------
+$spacer: 1rem;
+$spacers: (
+    0: 0,
+    1: $spacer * .25,
+    2: $spacer * .5,
+    3: $spacer,
+    4: $spacer * 1.5,
+    5: $spacer * 3,
+    6: $spacer * 4,
+    7: $spacer * 5,
+    8: $spacer * 6.25,
+    9: $spacer * 7.5,
+    10: $spacer * 9.375,
+);
+
+$colors: (
+    'tertiary': $tertiary
+);
+
+$styles: normal, italic, oblique, initial, unset, inherit;
+
+:root {
+    --bs-white: #{$white};
+    --bs-black: #{$black};
+    --swiper-pagination-color: #{$primary};
+}

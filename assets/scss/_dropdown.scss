@@ -1,0 +1,17 @@
+.dropdown{
+    &-menu{
+        @extend .box;
+        padding: 0;
+        background-color: var(--bs-body-bg);
+        overflow: hidden;
+    }
+    &-item{
+        @include rfs(14px);
+        font-weight: 600;
+        padding: 15px;
+        &:hover{
+            color: var(--bs-body-bg);
+            background-color: var(--bs-body-color);
+        }
+    }
+}

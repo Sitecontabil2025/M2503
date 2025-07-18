@@ -1,0 +1,19 @@
+.icon{
+    &-solutions{
+        @include square(40px);
+        @include flexCenter;
+        @include rfs(14px);
+        border-radius: 50%;
+        color: var(--bs-black);
+        margin-bottom: 24px;
+    }
+
+    &-socialMedia {
+        color: var(--bs-body-color);
+    }
+
+    &-btn{
+        color: var(--bs-body-bg);
+        background-color: var(--bs-body-color);
+    }
+}

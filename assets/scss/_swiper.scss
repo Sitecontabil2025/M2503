@@ -1,0 +1,11 @@
+.swiper{
+    &-pagination{
+        &-bullet{
+            border-radius: 30px;
+            transition: all ease .7s;
+            &-active{
+                width: 32px;
+            }
+        }
+    }
+}

@@ -1,0 +1,47 @@
+// RESET --------------------
+html{
+    &:not([data-bs-theme="dark"]){
+        body, .bg-solid{
+            background-color: var(--bs-gray-300);
+        }
+
+        .img-logo{
+            filter: none;
+        }
+    }
+}
+body{
+    scroll-behavior: smooth;
+    font: {
+        family: $fontFamily;
+    };
+}
+
+a{
+    color: var(--bs-body-color);
+    text-decoration: none !important;
+    transition: all ease .7s;
+    &:hover{
+        color: $primary;
+    }
+    
+}
+
+input, button, textarea, select{
+    &:focus{
+        outline: none !important;
+        box-shadow: none !important;
+    }
+}
+
+button{
+    background: transparent;
+    border: none;
+    transition: all ease .7s;
+}
+
+// SELECT TEXT --------------------
+::selection{
+    background-color: darken($primary, 10%);
+    color: set-color($primary);
+}

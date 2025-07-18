@@ -1,0 +1,18 @@
+.text{
+    &-tag{
+        @include rfs(14px);
+        font-weight: 500;
+        text-transform: uppercase;
+        position: relative;
+        display: flex;
+        align-items: center;
+        &:before{
+            @include pseudoElement("", relative);
+            width: 50px;
+            height: 1px;
+            display: inline-block;
+            margin-right: 15px;
+            background-color: var(--bs-body-color);
+        }
+    }
+}

@@ -1,0 +1,10 @@
+.accordion{
+    &-item{
+        margin-bottom: 20px
+    }
+    &-button, &-button:not(.collapsed){
+        @extend .box;
+        background-color: transparent;
+        color: currentColor;
+    }
+}

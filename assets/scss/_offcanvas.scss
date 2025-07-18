@@ -1,0 +1,45 @@
+.offcanvas{
+    &-body{
+        .nav{
+            &-item{
+                text-align: right;
+                &:not(:last-child){
+                    margin-bottom: 10px;
+                }
+
+                &-offcanvas{
+                    display: block;
+                }
+            }
+
+            &-link {
+                position: relative;
+                padding: 8px;
+                border-radius: 30px;
+            
+                &::before {
+                    font-family: "Font Awesome 6 Free";
+                    font-weight: 900;
+                    @include pseudoElement('\f105', relative);
+                    @include square(18px);
+                    @include flexCenter;
+                    border-radius: 50%;
+                    background-color: var(--bs-primary);
+                    color: var(--bs-white);
+                    margin-right: 5px;
+                }
+            }
+        }
+    }
+
+    &-header{
+        .btn-close{
+            @include square(30px);
+            opacity: 1;
+            background-image: none;
+            background-color: var(--bs-primary);
+            color: var(--bs-white);
+            border-radius: 4px 4px 4px 32px;
+        }
+    }
+}

@@ -1,0 +1,24 @@
+.bg{
+    &-abstract{
+        width: 100%;
+        background: {
+            image: url(#{$urlImg}bg.png);
+            repeat: no-repeat;
+            attachment: fixed;
+            size: cover;
+        };
+        position: relative;
+        &:before{
+            @include pseudoElement('', absolute);
+            @include square(100%);
+            top: 0;
+            left: 0;
+            background-color: rgba(var(--bs-body-bg-rgb), .3);
+            backdrop-filter: blur(150px);
+        }
+    }
+
+    &-solid{
+        background-color: var(--bs-body-bg);
+    }
+}
