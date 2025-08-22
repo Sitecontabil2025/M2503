@@ -88,10 +88,14 @@
         <div class="col-lg-6">
             <div class="row gy-4 align-items-stretch">
                 <?php
-                $total = count($servicos);
                 $index = 0;
+                $numeros = [0, 3];
                 foreach ($servicos as $itens):
-                    $classeCol = ($index === 0 || $index === $total - 1) ? 'col-lg-5' : 'col-lg-7';
+                    if (in_array($index, $numeros)) {
+                        $classeCol = 'col-lg-5';
+                    } else {
+                        $classeCol = 'col-lg-7';
+                    }
                 ?>
                     <div class="col-md-6 <?= $classeCol ?>">
                         <a href="<?= $itens['link'] ?>" class="box-solutions_transparent h-100 d-block">
@@ -101,9 +105,12 @@
                         </a>
                     </div>
                 <?php
-                    $index++;
-                endforeach
-                ?>
+                    if ($index == 3) {
+                        $index = 0;
+                    } else {
+                        $index++;
+                    }
+                endforeach; ?>
             </div>
         </div>
     </div>
