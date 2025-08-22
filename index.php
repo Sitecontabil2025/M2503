@@ -25,14 +25,14 @@
         <div class="col-lg-4">
             <div class="box-solutions">
                 <i class="fa-solid fa-check icon-solutions bg-primary"></i>
-                <h2 class="h5 mb-4 fw-bolder">Com Simplicadade</h2>
+                <h2 class="h5 mb-4 fw-bolder">Com Simplicidade</h2>
                 <p class="small">Com dinamismo e praticidade, fazemos todo o trabalho duro por você de forma simples, rápida e interativa.</p>
             </div>
         </div>
         <div class="col-lg-4">
             <div class="box-solutions">
                 <i class="fa-solid fa-user-plus icon-solutions bg-tertiary"></i>
-                <h2 class="h5 mb-4 fw-bolder">Mais Praticiadade</h2>
+                <h2 class="h5 mb-4 fw-bolder">Mais Praticidade</h2>
                 <p class="small">Somos um Escritório de Contabilidade com profissionais capacitados para facilitar sua vida e de sua empresa.</p>
             </div>
         </div>
